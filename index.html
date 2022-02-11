@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="كفراتي هو نقطة بيع بين العميل و الشركة أطلب كفرك و أنت في بيتك" />
     <meta name="keywords" content="كفرات, سيارات, كفراتي, سيارة, تصليح, صيانة, عالم السيارات, بيع, شراء" />
-    <title>كفراتي</title>
+    <title>Document</title>
 
     <!-- Font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -259,6 +259,58 @@
     
         <!-- نهاية جزء الصفحة الرئيسية -->
 
+    <!-- بداية شات البوت -->
+
+    <div class="chat_bar_collapseible">
+        <button id="chat_btn" type="button" class="collapsible"> دردش معنا!
+            <i id="chat_icon" style="color: #fff;" class="fa fa-fw far fa-comments"></i>
+        </button>
+
+
+        <div class="content">
+
+            <div class="full_chat_block">
+
+                <!-- Message Container -->
+
+                <div class="outer_container">
+                    <div class="chat_container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat_timestamp"></h5>
+                            <div id="botStarterMessage" class="botText"><span>تحميل...</span></div>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat_baar_input_block">
+                            <div id="userInput">
+                                <input type="text" name="msg" id="textInput" class="input_box" placeholder="قل مرحبا..." />
+                                <p></p>
+                            </div>
+
+                            <div class="chat_bar_icons">
+                                <i id="chat_icon" style="color: rgba(236, 29, 29, 1);" class="fa fa-fw far fa-heart" onclick="heartBtn()"></i>
+
+                                <i id="chat_icon" style="color: #333;" class="fa fa-fw fa fas fa-paper-plane" onclick="sendBtn()"></i>
+
+                            </div>
+                        </div>
+
+
+                        <div id="chat_bar_bottom">
+                            <p></p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- نهاية شات البوت -->
+
     <!-- بداية جزء أسفل الصفحة -->
 
      
@@ -301,6 +353,8 @@
     <!-- نهاية جزء أسفل الصفحة -->
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/responses.js"></script>
     <!-- custom js -->
     <script src="./js/main.js"></script>
 </body>
