@@ -19,6 +19,7 @@
     <!-- بداية رأس الصفحة -->
     <header>
         <img src="./images/logo MyTires.png" alt="" class="logo" />
+        <img src="./images/Group.png" class="filtr" alt="filtr" />
 
         <div class="buttons">
         <a href="#">
@@ -35,13 +36,90 @@
 
         <div class="sala">
         <a href="#">
-            <img src="./images/icons8-add-shopping-cart-30.png" alt="" />
+            <img src="./images/add_cart.png" alt="" />
         </a>
         </div>
         </div>
 
     </header>
     <!-- نهاية رأس الصفحة -->
+
+    <!-- بداية القائمة المنسدلة -->
+
+    
+        <div class="select_box">
+    
+            <div class="options_container">
+    
+                <div class="option">
+                    <input type="radio" class="radio" id="autoomobles" name="category" /> 
+    
+                    <label for="autoomobles">ماكسس</label>
+                </div>
+    
+                <div class="option">
+                    <input type="radio" class="radio" id="film" name="category" /> 
+    
+                    <label for="film">هانكوك</label>
+                </div>
+    
+            </div>
+    
+            <div class="selected">
+                الشركات
+            </div>
+    
+        </div>
+    
+        <div class="select_box2">
+    
+            <div class="options_container_2">
+    
+                <div class="option_2">
+                    <input type="radio" class="radio" id="autoomobles" name="category" /> 
+    
+                    <label for="autoomobles">ماكسس</label>
+                </div>
+    
+                <div class="option_2">
+                    <input type="radio" class="radio" id="film" name="category" /> 
+    
+                    <label for="film">هانكوك</label>
+                </div>
+    
+            </div>
+    
+            <div class="selected_2">
+                اسم الكفر
+            </div>
+    
+        </div>
+    
+        <div class="select_box3">
+    
+            <div class="options_container_3">
+    
+                <div class="option_3">
+                    <input type="radio" class="radio" id="autoomobles" name="category" /> 
+    
+                    <label for="autoomobles">ماكسس</label>
+                </div>
+    
+                <div class="option_3">
+                    <input type="radio" class="radio" id="film" name="category" /> 
+    
+                    <label for="film">هانكوك</label>
+                </div>
+    
+            </div>
+    
+            <div class="selected_3">
+                مقاس الكفر
+            </div>
+    
+        </div>
+
+    <!-- نهاية القائمة المنسدلة -->
 
     <!-- بداية جزء الصفحة الرئيسية -->
 
@@ -259,58 +337,6 @@
     
         <!-- نهاية جزء الصفحة الرئيسية -->
 
-    <!-- بداية شات البوت -->
-
-    <div class="chat_bar_collapseible">
-        <button id="chat_btn" type="button" class="collapsible"> دردش معنا!
-            <i id="chat_icon" style="color: #fff;" class="fa fa-fw far fa-comments"></i>
-        </button>
-
-
-        <div class="content">
-
-            <div class="full_chat_block">
-
-                <!-- Message Container -->
-
-                <div class="outer_container">
-                    <div class="chat_container">
-                        <!-- Messages -->
-                        <div id="chatbox">
-                            <h5 id="chat_timestamp"></h5>
-                            <div id="botStarterMessage" class="botText"><span>تحميل...</span></div>
-                        </div>
-
-                        <!-- User input box -->
-                        <div class="chat_baar_input_block">
-                            <div id="userInput">
-                                <input type="text" name="msg" id="textInput" class="input_box" placeholder="قل مرحبا..." />
-                                <p></p>
-                            </div>
-
-                            <div class="chat_bar_icons">
-                                <i id="chat_icon" style="color: rgba(236, 29, 29, 1);" class="fa fa-fw far fa-heart" onclick="heartBtn()"></i>
-
-                                <i id="chat_icon" style="color: #333;" class="fa fa-fw fa fas fa-paper-plane" onclick="sendBtn()"></i>
-
-                            </div>
-                        </div>
-
-
-                        <div id="chat_bar_bottom">
-                            <p></p>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- نهاية شات البوت -->
-
     <!-- بداية جزء أسفل الصفحة -->
 
      
@@ -354,7 +380,6 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/responses.js"></script>
     <!-- custom js -->
     <script src="./js/main.js"></script>
 </body>
