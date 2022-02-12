@@ -1,4 +1,4 @@
-@media(max-width: 600px)
+@media(max-width: 1024px)
 {
     .select_box,
     .select_box2,
@@ -7,6 +7,31 @@
         margin-right: 0px;
     }
 
+    .sala
+    {
+        margin-left: -10px;
+    }
+
+    .filtr
+    {
+        cursor: pointer;
+        width: 30px;
+        margin-left: 200px;
+    }
+
+}
+
+@media (max-width: 820px)
+{
+    .login, .signUp
+    {
+        padding: 0 10px;
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 600px)
+{
     header
     {
         padding: 1px 32px;
