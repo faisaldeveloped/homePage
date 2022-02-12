@@ -18,6 +18,17 @@ a, button
     text-decoration: none;
 }
 
+html::-webkit-scrollbar
+{
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-thumb
+{
+    background: rgba(236, 29, 29, 1);
+    border-radius: 50px;
+}
+
 body
 {
     background-color: rgba(35, 35, 35, 0.95);
@@ -43,6 +54,13 @@ header
 {
     cursor: pointer;
     width: 80px;
+}
+
+.filtr
+{
+    cursor: pointer;
+    width: 55px;
+    margin-left: 480px;
 }
 
 .buttons
@@ -99,6 +117,238 @@ header
 .sala img
 {
     width: 50px;
+}
+
+/* تصميم القائمة المنسدلة */
+
+.select_box,
+.select_box2,
+.select_box3
+{
+    display: flex;
+    width: 286px;
+    flex-direction: column;
+    color: #fff;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s;
+    order: 1;
+}
+
+.select_box.active,
+.select_box2.active,
+.select_box3.active
+{
+    max-height: 240px;
+    opacity: 1;
+}
+
+.select_box .options_container
+{
+    background: rgba(37, 37, 37, 1);
+    color: #fff;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    order: 1;
+}
+
+.select_box2 .options_container_2
+{
+    background: rgba(37, 37, 37, 1);
+    color: #fff;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    order: 1;
+}
+
+.select_box3 .options_container_3
+{
+    background: rgba(37, 37, 37, 1);
+    color: #fff;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    order: 1;
+}
+
+
+.selected
+{
+    background: rgba(37, 37, 37, 1);
+    color: #fff;
+    position: relative;
+    order: 0;
+}
+
+.selected_2
+{
+    border-top: 1px solid rgba(236, 29, 29, 1);
+    background: rgba(37, 37, 37, 1);
+    color: #fff;
+    position: relative;
+    order: 0;
+}
+
+.selected_3
+{
+    border-top: 1px solid rgba(236, 29, 29, 1);
+    background: rgba(37, 37, 37, 1);
+    color: #fff;
+    position: relative;
+    order: 0;
+}
+
+.selected::after
+{
+    content: '';
+    background: url('../images/Polygon\ 1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 22px;
+    left: 10px;
+    top: 10px;
+    transition: all 0.4s;
+}
+
+.select_box .options_container.active
+{
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select_box .options_container.active + .selected::after
+{
+    transform: rotateX(180deg);
+    top: -15px;
+}
+
+.select_box .options_container::-webkit-scrollbar
+{
+    display: none;
+}
+
+.select_box .options_container::-webkit-scrollbar-thumb
+{
+    display: none;
+}
+
+/* 2 */
+.selected_2::after
+{
+    content: '';
+    background: url('../images/Polygon\ 1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 22px;
+    left: 10px;
+    top: 10px;
+    transition: all 0.4s;
+}
+
+.select_box2 .options_container_2.active
+{
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select_box2 .options_container_2.active + .selected_2::after
+{
+    transform: rotateX(180deg);
+    top: -15px;
+}
+
+.select_box2 .options_container_2::-webkit-scrollbar
+{
+    display: none;
+}
+
+.select_box2 .options_container_2::-webkit-scrollbar-thumb
+{
+    display: none;
+}
+
+/* 3 */
+.selected_3::after
+{
+    content: '';
+    background: url('../images/Polygon\ 1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 22px;
+    left: 10px;
+    top: 10px;
+    transition: all 0.4s;
+}
+
+.select_box3 .options_container_3.active
+{
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select_box3 .options_container_3.active + .selected_3::after
+{
+    transform: rotateX(180deg);
+    top: -15px;
+}
+
+.select_box3 .options_container_3::-webkit-scrollbar
+{
+    display: none;
+}
+
+.select_box3 .options_container_3::-webkit-scrollbar-thumb
+{
+    display: none;
+}
+
+.select_box .option,
+.selected,
+.select_box2 .option_2,
+.selected_2,
+.select_box3 .option_3,
+.selected_3
+{
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.select_box .option:hover,
+.select_box2 .option_2:hover,
+.select_box3 .option_3:hover
+{
+    background: #414b57;
+}
+
+.select_box label,
+.select_box2 label,
+.select_box3 label
+{
+    cursor: pointer;
+}
+
+.select_box .option .radio,
+.select_box2 .option_2 .radio,
+.select_box3 .option_3 .radio
+{
+    display: none;
 }
 
 
@@ -194,194 +444,6 @@ header
     color: #fff;
 }
 
-/* تصميم شات البوت */
-
-
-.full_chat_block::-webkit-scrollbar {
-    display: none;
-}
-
-.chat_bar_collapseible
-{
-    position: fixed;
-    bottom: 0;
-    left: 50px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-.collapsible
-{
-    background-color: rgba(236, 29, 29, 1);
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 300px;
-    text-align: right;
-    outline: none;
-    font-size: 18px;
-    border-radius: 10px 10px 0 0;
-    border: none;
-    border-bottom: none;
-}
-
-.content
-{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
-}
-
-.full_chat_block
-{
-    width: 300px;
-    background: white;
-    text-align: center;
-    overflow: auto;
-    scrollbar-width: none;
-    height: max-content;
-    transition: max-height 0.2s ease-out;
-}
-
-.outer_container
-{
-    min-height: 500px;
-    bottom: 0%;
-    position: relative;
-}
-
-.chat_container
-{
-    max-height: 500px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    scroll-behavior: smooth;
-    hyphens: auto;
-}
-
-.chat_container::-webkit-scrollbar
-{
-    display: none;
-}
-
-.chat_baar_input_block
-{
-    display: flex;
-    float: right;
-    box-sizing: border-box;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    background-color: rgb(235, 235, 235);
-    border-radius: 10px 10px 0 0;
-    padding: 10px 0 10px 10px;
-}
-
-.chat_bar_icons
-{
-    display: flex;
-    justify-content: space-evenly;
-    box-sizing: border-box;
-    width: 25%;
-    float: left;
-    font-size: 20px;
-}
-
-#chat_icon:hover
-{
-    opacity: 7;
-}
-
-
-/* Chat bubbles */
-
-#userInput
-{
-    width: 75%;
-}
-
-.input_box
-{
-    float: right;
-    border: none;
-    box-sizing: border-box;
-    width: 100%;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 10px;
-    color: #000;
-    background-color: white;
-    outline: none;
-}
-
-.userText
-{
-    color: white;
-    font-size: 16px;
-    font-weight: normal;
-    text-align: left;
-    clear: both;
-}
-
-.userText span
-{
-    line-height: 1.8em;
-    display: inline-block;
-    background: rgba(236, 29, 29, 1);
-    padding: 10px;
-    border-radius: 8px;
-    border-bottom-left-radius: 2px;
-    max-width: 80%;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    animation: floatUp .5s forwards;
-}
-
-.botText
-{
-    color: #000;
-    font-weight: normal;
-    font-size: 16px;
-    text-align: right;
-    clear: both;
-}
-
-.botText span
-{
-    line-height: 1.8em;
-    display: inline-block;
-    background: #e0e0e0;
-    padding: 10px;
-    border-radius: 8px;
-    border-bottom-right-radius: 2px;
-    max-width: 80%;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    animation: floatUp .5s forwards;
-}
-
-
-@keyframes floatUp
-{
-    from
-    {
-        transform: translateY(14px);
-        opacity: .0;
-    }
-
-    to
-    {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
 /* Footer */
 
 footer
@@ -392,6 +454,7 @@ footer
     color:#fff;
     padding: 100px 0 30px;
     border-top-left-radius: 125px;
+    border-top-right-radius: 125px;
     font-size: 13px;
     line-height: 20px;
 }
