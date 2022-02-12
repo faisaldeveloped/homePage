@@ -88,11 +88,6 @@ header
     transition: all 0.3s ease 0s;
 }
 
-.login:hover
-{
-    background-color: transparent;
-}
-
 .signUp
 {
     padding: 5px 25px;
@@ -106,10 +101,6 @@ header
     transition: all 0.3s ease 0s;
 }
 
-.signUp:hover
-{
-    background-color: rgba(236, 29, 29, 1);
-}
 .sala
 {
     margin-left: -120px;
