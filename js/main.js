@@ -1,3 +1,5 @@
+// برمجة السنة تلقائياً
+
 const date = new Date();
 
 const yrear = document.getElementById("year");
@@ -70,3 +72,10 @@ filtr.addEventListener("click", () =>{
     selectBox2.classList.toggle("active");
     selectBox3.classList.toggle("active");
 });
+
+// إذا تحرك أخف لي القائمة المنسدلة
+window.onscroll = () =>{
+    selectBox.classList.remove('active');
+    selectBox2.classList.remove("active");
+    selectBox3.classList.remove("active");
+};
