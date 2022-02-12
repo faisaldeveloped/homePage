@@ -4,128 +4,69 @@ const yrear = document.getElementById("year");
 
 yrear.innerHTML = date.getFullYear();
 
+// برمجة القائمة المنسدلة
 
-// برمجة شات البوت
+//1
+const selected = document.querySelector(".selected");
 
-// هذا الكود وظيفته يظهر لنا الدردشة بمجرد الضغط على دردش معنا
+const optionsContainer = document.querySelector(".options_container");
 
-let coll = document.getElementsByClassName("collapsible");
+const optionList = document.querySelectorAll(".option");
 
-for(let i = 0; i < coll.length; i++)
-{
-    coll[i].addEventListener("click", function(){
-        this.classList.toggle("active");
+selected.addEventListener("click", () =>{
+    optionsContainer.classList.toggle("active");
+});
 
-        let content = this.nextElementSibling;
-
-        if(content.style.maxHeight)
-        {
-            content.style.maxHeight = null;
-        }
-        else
-        {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
+optionList.forEach(o => {
+    o.addEventListener("click", () =>{
+        selected.innerHTML = o.querySelector("label").innerHTML;
+        optionsContainer.classList.remove("active");
     });
-}
+});
 
+//2
+const selected_2 = document.querySelector(".selected_2");
 
-function getTime()
-{
-    let today = new Date();
+const optionsContainer_2 = document.querySelector(".options_container_2");
 
-    hours     = today.getHours();
-    minutes   = today.getMinutes();
+const optionList_2 = document.querySelectorAll(".option_2");
 
-    if(hours < 10)
-    {
-        hours = "0" + hours;
-    }
+selected_2.addEventListener("click", () =>{
+    optionsContainer_2.classList.toggle("active");
+});
 
-    if(minutes < 10)
-    {
-        minutes = "0" + minutes;
-    }
+optionList_2.forEach(o => {
+    o.addEventListener("click", () =>{
+        selected_2.innerHTML = o.querySelector("label").innerHTML;
+        optionsContainer_2.classList.remove("active");
+    });
+});
 
-    let time = hours + ":" + minutes;
-    return time;
-}
+// 3
+const selected_3 = document.querySelector(".selected_3");
 
-function firstBotMessage()
-{
-    let Message = "مرحبا أنا مساعدك الأفتراضي إذا بغيت أي مساعدة كلمني و راح أحاول أساعدك باللي أقدر عليه, تحياتي و تقديري";
-    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + Message + '</span></p>';
+const optionsContainer_3 = document.querySelector(".options_container_3");
 
+const optionList_3 = document.querySelectorAll(".option_3");
 
-    let time = getTime();
+selected_3.addEventListener("click", () =>{
+    optionsContainer_3.classList.toggle("active");
+});
 
-    $("#chat_timestamp").append(time);
-    document.getElementById("userInput").scrollIntoView(true);
-}
+optionList_3.forEach(o => {
+    o.addEventListener("click", () =>{
+        selected_3.innerHTML = o.querySelector("label").innerHTML;
+        optionsContainer_3.classList.remove("active");
+    });
+});
 
+const filtr = document.querySelector(".filtr");
+const selectBox = document.querySelector(".select_box");
+const selectBox2 = document.querySelector(".select_box2");
+const selectBox3 = document.querySelector(".select_box3");
 
-firstBotMessage();
-
-
-function getHardResponse(userText)
-{
-    let botResponse = getBotResponse(userText);
-    let botHtml     = '<p class="botText"><span>' + botResponse + '</span></p>';
-
-    $("#chatbox").append(botHtml);
-
-    document.getElementById("chat_bar_bottom").scrollIntoView(true);
-}
-
-
-function getResponse()
-{
-    let userText = $("#textInput").val();
-
-    if(userText == "")
-    {
-        userText = '<i style="color: #fff;" class="fa fa-fw far fa-heart"></i>';
-    }
-
-    let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
-
-    $("#textInput").val("");
-    $("#chatbox").append(userHtml);
-
-    document.getElementById("chat_bar_bottom").scrollIntoView(true);
-
-    setTimeout(() =>{
-        getHardResponse(userText);
-    }, 1000);
-}
-
-
-function btnSendText(sampleText)
-{
-    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
-
-    $("#textInput").val("");
-    $("#chatbox").append(userHtml);
-
-    document.getElementById("chat_bar_bottom").scrollIntoView(true);
-}
-
-function sendBtn()
-{
-    getResponse();
-}
-
-function heartBtn()
-{
-   let userHtml = '<i style="color: #fff;" class="fa fa-fw far fa-heart"></i>';
-    getResponse(userHtml);
-}
-
-
-$("#textInput").keypress(function(e){
-
-    if(e.which == 13)
-    {
-        getResponse();
-    }
+filtr.addEventListener("click", () =>{
+    selectBox.classList.toggle("active");
+    selectBox2.classList.toggle("active");
+    selectBox3.classList.toggle("active");
 });
