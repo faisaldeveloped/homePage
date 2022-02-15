@@ -53,14 +53,15 @@ header
 .logo img
 {
     cursor: pointer;
-    width: 80px;
+    width: 120px;
+    margin-left: 20px;
 }
 
 .filtr
 {
     cursor: pointer;
     width: 55px;
-    margin-left: 547px;
+    margin-left: 565px;
 }
 
 .buttons
@@ -77,8 +78,8 @@ header
 
 .login
 {
-    padding: 5px 25px;
-    margin-left: 40px;
+    padding: 5px 20px;
+    margin-left: 10px;
     background-color: rgba(236, 29, 29, 1);
     border: none;
     font-weight: 700;
@@ -90,7 +91,7 @@ header
 
 .signUp
 {
-    padding: 5px 25px;
+    padding: 5px 20px;
     margin-left: 15px;
     background-color: transparent;
     border: none;
@@ -520,20 +521,4 @@ hr
 .copyright .myTires
 {
     color:rgba(236, 29, 29, 1);
-}
-
-@media(max-width: 1142px)
-{
-
-    header
-    {
-        padding: 1px 200px;
-    }
-
-    .login, .signUp
-    {
-        padding: 5px 10px;
-        font-size: 15px;
-    }
-
 }
