@@ -1,6 +1,7 @@
 /* خط قوقل */
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;700;800;900&display=swap');
 
+/* إعادة بناء هيكلة الموقع */
 *
 {
     box-sizing: border-box;
@@ -41,9 +42,12 @@ body
     font-weight: 800;
     color: #fff;
 }
+
+/* تصميم رأس الصفحة */
 header
 {
     display: flex;
+    height: 50px;
     justify-content: space-between;
     align-items: center;
     padding: 5px 10%;
@@ -53,17 +57,20 @@ header
 .logo img
 {
     cursor: pointer;
-    width: 120px;
-/*     margin-left: 10px; */
-    margin-left: 20px;
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    right: 3%;
     margin-top:10px;
 }
 
 .filtr
 {
     cursor: pointer;
-    width: 55px;
-    margin-left: 565px;
+    width: 40px;
+    position: absolute;
+    top: 8px;
+    right: 17%;
 }
 
 .buttons
@@ -104,13 +111,12 @@ header
     transition: all 0.3s ease 0s;
 }
 
-.sala
-{
-    margin-left: -120px;
-}
 .sala img
 {
-    width: 50px;
+    width: 40px;
+    position: absolute;
+    top: 8px;
+    left: 1%;
 }
 
 /* تصميم القائمة المنسدلة */
@@ -203,7 +209,7 @@ header
 .selected::after
 {
     content: '';
-    background: url('../images/Polygon\ 1.svg');
+    background: url('../images/Polygon 1.svg');
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -241,7 +247,7 @@ header
 .selected_2::after
 {
     content: '';
-    background: url('../images/Polygon\ 1.svg');
+    background: url('../images/Polygon 1.svg');
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -279,7 +285,7 @@ header
 .selected_3::after
 {
     content: '';
-    background: url('../images/Polygon\ 1.svg');
+    background: url('../images/Polygon 1.svg');
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -438,7 +444,7 @@ header
     color: #fff;
 }
 
-/* Footer */
+/* تصميم نهاية الصفحة Footer */
 
 footer
 {
